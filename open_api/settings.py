@@ -76,19 +76,24 @@ WSGI_APPLICATION = 'open_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#mongo_uri = 'mongodb+srv://icsduser:ExZdKpGzh9yxloLl@cluster0.xhorf.mongodb.net/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=true'
-mongo_uri = 'mongodb+srv://icsduser:ExZdKpGzh9yxloLl@cluster0.xhorf.mongodb.net/Manylaws_Json?retryWrites=true&w=majority'
+# mongo_uri = 'mongodb+srv://icsduser:ExZdKpGzh9yxloLl@cluster0.xhorf.mongodb.net/?authSource=admin&readPreference=primary&appname=MongoDB%20Compass&ssl=true'
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'djongo',
+#     'NAME': 'Ahrvo-Comply-Django-API',
+#     'CLIENT':{
+#         'host': mongo_uri#'mongodb+srv://username:password@cluster0.ciqno.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+#         },
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-    'ENGINE': 'djongo',
-    'NAME': 'Manylaws_Json',
-    'ENFORCE_SCHEMA': False,
-    'CLIENT':{
-        'host': mongo_uri#'mongodb+srv://username:password@cluster0.ciqno.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 
 # Password validation
